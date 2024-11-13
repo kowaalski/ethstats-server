@@ -1,0 +1,19 @@
+image:
+  repository: repoImage
+  tag: 0.1.0
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  port: 3000
+
+resources: 
+  # limits:
+  #   memory: "1Gi"
+
+name: ethstats-dashboard
+
+env:
+  WS_SECRET: "test"
+
+replicaCount: 1
